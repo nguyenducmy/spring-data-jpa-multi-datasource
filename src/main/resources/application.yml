@@ -1,0 +1,28 @@
+spring:
+  datasource-source1:
+    jdbcUrl: jdbc:mysql://localhost:3306/jpaMultiDatasource1
+    username: root
+    password: admin
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+
+  datasource-source2:
+    jdbcUrl: jdbc:mysql://localhost:3306/jpaMultiDatasource2
+    username: root
+    password: admin
+    driverClassName: com.mysql.cj.jdbc.Driver
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql=true: true
+
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration
+
+
+server:
+  port: 9090
+
+
